@@ -3,6 +3,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
+import Logo from '../../../assets/new.png'
 
 const TopNav = ({isclicked, click}) => {
 
@@ -18,7 +19,7 @@ const TopNav = ({isclicked, click}) => {
                         </button>
                     
                     </div>
-                <img></img>
+                    <img className='hidden lg:block h-[50px] w-[50px]' src={Logo} alt="logo" />
                 <div className='flex sm:space-x-4 lg:space-x-12 justify-center items-center '>
                     <div className='relative'>
                         <NotificationsNoneOutlinedIcon/>
