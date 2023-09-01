@@ -55,7 +55,7 @@ const Client = (id) => {
                         <p className='text-[#898989] text-sm'>Here's the clients list</p>
                     </div>
 
-                    <div className='w-full  bg-white rounded-md px-3 lg:px-6 py-10'>
+                    <div className='w-full  bg-white rounded-md px-1 md:px-3 lg:px-6 py-10'>
 
                         <div className='w-full flex space-x-4'>
                             <div className='flex bg-transparent z-10  rounded-md w-[80%] border border-[#B5B6B5] h-[40px]'>
@@ -68,18 +68,18 @@ const Client = (id) => {
                             </button>
                         </div>
 
-                        <div className='p-2 lg:w-full'> 
-                            <div className='flex gap-4 w-full  rounded-tr-md rounded-tl-md px-3 bg-[#DDAA33] bg-opacity-10 py-3 border-b-2 border-b-[#DDAA33] '>
+                        <div className='pt-4 md:p-2 lg:w-full'> 
+                            <div className='flex gap-4 w-full  rounded-tr-md rounded-tl-md px-1 md:px-3 bg-[#DDAA33] bg-opacity-10 py-3 border-b-2 border-b-[#DDAA33] '>
                                 <div className='w-[20%]'>
                                     <p className='text-[14px] font-[700]'>Name</p>
                                 </div>
-                                <div className='w-[30%]'>
+                                <div className='hidden lg:block w-[30%]'>
                                     <p className='text-[14px] font-[700]'>Email</p>
                                 </div>
-                                <div className='w-[20%]'>
+                                <div className='w-[30%] md:w-[20%]'>
                                     <p className='text-[14px] font-[700]'>Phone</p>
                                 </div>
-                                <div className='w-[30%]'>
+                                <div className='w-[50%]  md:w-[30%]'>
                                     <p className='text-[14px] font-[700]' >Residential Address</p>
                                 </div>  
                             </div>
@@ -89,18 +89,18 @@ const Client = (id) => {
                                     data?
                                     data.map((item, index) =>{
                                         return(
-                                            <Link to={`/client-profile/${item.id}`} key={index} className='flex gap-4 w-full hover:bg-[#DDAA33] hover:bg-opacity-10 px-2 hover:border-l-2 hover:border-[#DDAA33]'>
+                                            <Link to={`/client-profile/${item.id}`} key={index} className='flex gap-4 w-full hover:bg-[#DDAA33] hover:bg-opacity-10 md:px-2 hover:border-l-2 hover:border-[#DDAA33]'>
                                                 <div className='w-[20%] py-3 '>
-                                                    <p className='text-[14px] text-[#3E4954]'>{item.clientName}</p>
+                                                    <p className='text-[12px] md:text-[14px] text-[#3E4954]'>{item.clientName}</p>
                                                 </div>
-                                                <div className='w-[30%] py-3'>
-                                                    <p className='text-[14px] text-[#3E4954]'>{item.email}</p>
+                                                <div className='hidden lg:block w-[30%] py-3'>
+                                                    <p className='text-[12px] md:text-[14px] text-[#3E4954]'>{item.email}</p>
                                                 </div>
-                                                <div className='w-[20%] py-3'>
-                                                    <p className='text-[14px] text-[#3E4954]'>{item.phone}</p>
+                                                <div className='w-[30%] md:w-[20%] py-3'>
+                                                    <p className='text-[12px] md:text-[14px] text-[#3E4954]'>{item.phone}</p>
                                                 </div>
-                                                <div className='w-[30%] py-3'>
-                                                    <p className='text-[14px] text-[#3E4954]' >{item.res_address}</p>
+                                                <div className='w-[50%] md:w-[30%] py-3'>
+                                                    <p className='text-[12px] md:text-[14px] text-[#3E4954]' >{item.res_address}</p>
                                                 </div>  
                                             </Link>
                                         )
