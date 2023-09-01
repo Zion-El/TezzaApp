@@ -33,7 +33,7 @@ const SideNav = () => {
       <div className='pt-10 md:pt-20 lg:pt-20 lg:mt-10 flex flex-col'>
         {
           navigation.map((item, index)=>
-            <Link className={`py-4 font-[600] text-[12px] md:text-sm px-4 ${isActive ? 'text-[#DDAA33] border-l-2 border-[#DDAA33]': ''}`} onClick={()=>setActive(isActive)} key={index} to={item.url}>
+            <Link className={`py-4 font-[600] text-[12px] md:text-sm px-4 ${isActive ? 'text-[#DDAA33] border-l-2 border-[#DDAA33] active': ''}`} key={index} to={item.url}>
               {item.title}
             </Link>
           )
