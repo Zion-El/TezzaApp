@@ -30,7 +30,7 @@ const Client = (id) => {
         if (value === ''){
             setData(userData)
         }else{
-            const result = userData.filter(item => item.clientName.includes(value))
+            const result = userData.filter(item => item.clientName.includes(value) | item.email.includes(value.toLowerCase()))
             setData(result)
         }
     }
@@ -59,7 +59,7 @@ const Client = (id) => {
 
                         <div className='w-full flex space-x-4'>
                             <div className='flex bg-transparent z-10  rounded-md w-[80%] border border-[#B5B6B5] h-[40px]'>
-                                <input className='border-none placeholder:text-sm outline-none w-full px-6 rounded-md' placeholder='Search by name, email ...' type="text" name="" id="" />
+                                <input className='border-none placeholder:text-sm outline-none w-full px-6 rounded-md' onChange={(e)=>setValue(e.target.value)} placeholder='Search by name, email ...' type="text" name="" id="" />
 
                             </div>
                             <button className='h-[40px] border shadow-sm w-[18%] bg-[#DDAA33] rounded-md flex justify-center items-center space-x-3'>

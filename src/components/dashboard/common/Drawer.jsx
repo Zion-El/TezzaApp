@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { navigation } from './data';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   Accordion,
   AccordionItem,
@@ -11,10 +11,15 @@ import {
   AccordionIcon,
   Box
 } from '@chakra-ui/react'
+import Icon from '@mui/material/Icon';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
+
 
 const SideNav = () => {
   const [toggle, setToggle] = useState(false)
-  const [isActive, setActive] = useState(false)
+  const router = useLocation()
+  console.log(router.pathname)
+
   return (
     <div className='w-full h-full bg-[#fff]'>
 
@@ -33,7 +38,8 @@ const SideNav = () => {
       <div className='pt-10 md:pt-20 lg:pt-20 lg:mt-10 flex flex-col'>
         {
           navigation.map((item, index)=>
-            <Link className={`py-4 font-[600] text-[12px] md:text-sm px-4 ${isActive ? 'text-[#DDAA33] border-l-2 border-[#DDAA33] active': ''}`} key={index} to={item.url}>
+            <Link className={`py-4 font-[600] text-[12px] md:text-sm px-4 flex items-center gap-2 ${router.pathname.includes(item.url) ? 'text-[#DDAA33] border-l-2 border-[#DDAA33] active': ''}`} key={index} to={item.url}> <Icon>{item.icon
+            }</Icon> 
               {item.title}
             </Link>
           )
@@ -44,7 +50,7 @@ const SideNav = () => {
             <h2>
               <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' sx={{ py:'8px', px:'16px', fontWeight:'600', fontSize:'14px'}}>
-                  Reports
+                  <AssessmentOutlinedIcon/> Reports
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
