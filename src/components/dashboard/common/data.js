@@ -53,7 +53,7 @@ export const userData = [
         age: 24,
         nationality: 'Nigerian',
         dob: '04/11/20212',
-        marital_status: 'Singlr',
+        marital_status: 'Single',
         occupation: 'Artist',
         education: "Bachelor's Degree",
         phone: "+234(0)8160730668",
@@ -65,11 +65,11 @@ export const userData = [
     },
     {
         id: 4,
-        clientName: 'Odusote Mayokun',
-        fullname: 'Odusote Mayokun Kemi',
-        email: 'adegoketemitope1909@gmail.com',
-        gender: 'Female',
-        age: 54,
+        clientName: 'Gbadebo Mike',
+        fullname: 'Gbadebo Mike Mayokun',
+        email: 'mike@gmail.com',
+        gender: 'Male',
+        age: 44,
         nationality: 'Nigerian',
         dob: '04/11/20212',
         marital_status: 'Married',
@@ -80,7 +80,7 @@ export const userData = [
         mail_address: "No 2, Oloro Street Bank, Olodo Ibadan, Oyo State, Nigeria",
         country_of_interest: "Iceland",
         citizen: "Nigeria, Uganda",
-        purpose: 'Trading'
+        purpose: 'Study'
     },
     {
         id: 5,

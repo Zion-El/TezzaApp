@@ -30,7 +30,7 @@ const Client = (id) => {
         if (value === ''){
             setData(userData)
         }else{
-            const result = userData.filter(item => item.clientName.includes(value) | item.email.includes(value.toLowerCase()))
+            const result = userData.filter(item => item.clientName.includes(value) | item.email.includes(value.toLowerCase()) | item.purpose.includes(value))
             setData(result)
         }
     }
